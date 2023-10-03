@@ -1,6 +1,7 @@
 declare global {
   interface Window {
     manual_start: boolean;
+    oneTime: () => void;
   }
 }
 
@@ -23,9 +24,11 @@ if (!window || !window.manual_start) {
   infinite();
 }
 
-function oneTime() {
-  const hello: string = getHello();
-  if (hello === "") {
-    throw "empty";
-  }
+if (window) {
+  window.oneTime = function() {
+    const hello: string = getHello();
+    if (hello === "") {
+      throw "empty";
+    }
+  };
 }

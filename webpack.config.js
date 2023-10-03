@@ -18,7 +18,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: false,
       template: 'assets/index.html',
+      scriptLoading: 'blocking',
     }),
   ],
 };
