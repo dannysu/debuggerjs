@@ -1,0 +1,10 @@
+Build with:
+```
+npm run build
+```
+
+Then serve the "dist" directory:
+```
+cd dist
+python3 -m http.server
+```

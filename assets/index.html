@@ -2,16 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <script>
-      window.manual_start = true;
-    </script>
   </head>
   <body>
     <p>Multiple Bundles</p>
     <%= htmlWebpackPlugin.tags.bodyTags %>
     <script>
-      sayHello();
-      oneTime();
+      setTimeout(sayHello, 10000);
+      //sayHello();
     </script>
   </body>
 </html>
